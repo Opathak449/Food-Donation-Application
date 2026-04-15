@@ -59,6 +59,9 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 // API routes
 app.use('/api', require('./routes/index'));
 
+// Root route
+app.get('/', (req, res) => res.json({ success: true, message: 'FoodShare backend is running', api: '/api' }));
+
 // Health check
 app.get('/health', (req, res) => res.json({ status: 'ok', timestamp: new Date().toISOString() }));
 
