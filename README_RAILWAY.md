@@ -12,7 +12,9 @@ This project is ready to deploy the backend to Railway.
    - PORT=5000
    - CLIENT_URL=https://food-donation-application-ibnr.vercel.app
    - JWT_SECRET=<your-secret>
-5. Deploy the service.
+5. After Railway gives you a backend URL, set this in Vercel:
+   - VITE_API_URL=https://<your-railway-app>.up.railway.app/api
+6. Redeploy the Vercel frontend.
 
 ## Notes
 - The backend listens on the Railway-provided PORT automatically.
