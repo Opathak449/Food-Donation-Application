@@ -5,9 +5,11 @@ const { getDb } = require('../database/db');
 const { createNotification } = require('../services/notificationService');
 
 const generateToken = (user) => {
+  const jwtSecret = process.env.JWT_SECRET || 'foodshare-dev-secret-change-me';
+
   return jwt.sign(
     { id: user.id, email: user.email, role: user.role },
-    process.env.JWT_SECRET,
+    jwtSecret,
     { expiresIn: process.env.JWT_EXPIRES_IN || '7d' }
   );
 };

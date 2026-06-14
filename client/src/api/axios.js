@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+const productionApiBaseUrl = 'https://food-donation-application-production.up.railway.app/api'
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: import.meta.env.VITE_API_URL || (import.meta.env.PROD ? productionApiBaseUrl : '/api'),
   withCredentials: true,
 })
 
