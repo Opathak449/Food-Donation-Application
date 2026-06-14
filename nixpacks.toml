@@ -1,0 +1,11 @@
+[variables]
+NPM_CONFIG_PRODUCTION=false
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = ["cd server && npm install"]
+
+[phases.start]
+cmd = "cd server && npm start"
