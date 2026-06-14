@@ -4,6 +4,7 @@
   "description": "Full-stack Food Donation Platform",
   "main": "api/index.js",
   "scripts": {
+    "start": "node server/src/server.js",
     "build": "cd client && npm install && npm run build",
     "dev": "npm run dev:server & npm run dev:client",
     "dev:server": "cd server && npm start",

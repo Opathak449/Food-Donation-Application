@@ -1,11 +1,14 @@
 [variables]
 NPM_CONFIG_PRODUCTION=false
 
+[phases.setup]
+nixPkgs = ["nodejs_20", "python3"]
+
 [phases.install]
-cmds = ["npm install"]
+cmds = ["npm ci"]
 
 [phases.build]
-cmds = ["cd server && npm install"]
+cmds = ["npm run build"]
 
-[phases.start]
-cmd = "cd server && npm start"
+[start]
+cmd = "npm start"
