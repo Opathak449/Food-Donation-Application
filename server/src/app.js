@@ -21,6 +21,7 @@ app.use(cors({
       'http://localhost:5173',
       'http://localhost:5174',
       'http://localhost:3000',
+      'https://food-donation-application-ibnr.vercel.app',
       /\.vercel\.app$/,
       /\.onrender\.com$/,
       process.env.CLIENT_URL
